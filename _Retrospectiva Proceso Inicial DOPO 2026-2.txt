@@ -1,0 +1,37 @@
+﻿Retrospectiva Proceso Inicial DOPO 2026-2
+Juan Sebastian Rodriguez Paez
+Julieth Alejandra HERNANDEZ BAEZ
+
+
+
+
+
+
+
+
+1. ¿Cuáles fueron los mini-ciclos definidos? 
+Mini-ciclo 1 — 
+manage wheels (Extensión). Alcance: Requisitos 9 (Intercambiar dos ruedas) y 10 (Fijar y soltar una rueda). Justificación: Es la primera extensión natural del ciclo anterior. Necesitábamos garantizar que la lógica para bloquear/desbloquear y reposicionar las ruedas en el arreglo estuviera sólida antes de intentar aplicarles movimiento, asegurando el principio de extensibilidad sin dañar el código base.
+Mini-ciclo 2 — 
+spin wheels (Extensión). Alcance: Requisitos 11 (Rotar una rueda un número de pasos) y 12 (Dejar la máquina en una configuración dada), incluyendo el requisito de usabilidad para que en spin(wheel,steps) se visualice el movimiento paso a paso si la máquina está visible. Justificación: Este componente incluye la mayor complejidad algorítmica y gráfica. Al dejarlo como segundo mini-ciclo, pudimos concentrarnos en la usabilidad y en que el paso a paso gráfico no interfiriera con el estado invisible de las pruebas de unidad.
+
+
+2. ¿Cuál es el estado actual del proyecto en términos de mini-ciclos? ¿por qué?
+Casi concluido
+3. ¿Cuál fue el tiempo total invertido por cada uno de ustedes? (Horas/Hombre)
+Cada uno invirtió aproximadamente 12-14 horas en este ciclo, debido a la complejidad adicional de la visualización y las pruebas. 
+4. ¿Cuál consideran fue el mayor logro? ¿Por qué?
+Trabajar coordinados y en equipo y seguir perfeccionando el uso de los editores como lo son blue j y astah
+5. ¿Cuál consideran que fue el mayor problema técnico? ¿Qué hicieron para resolverlo?
+Manejar la dualidad entre el modo visible y el modo invisible para el método spin(wheel,steps). Al principio, la ejecución en modo visible era tan rápida que no se notaba el paso a paso, o los redibujados rompían las pruebas en modo invisible. Lo resolvimos implementando validaciones de estado (si es visible, hacer pausas y repintar; si es invisible, solo alterar la estructura de datos para que SlotMachineC2Test se ejecute al instante). 
+6. ¿Qué hicieron bien como equipo? ¿Qué se comprometen a hacer para mejorar los resultados?
+Para mejorar sin duda la administración del tiempo y algunos detalles en la comunicación y no dejar el proyecto para el final 
+7. Considerando las prácticas XP incluidas en los laboratorios. ¿Cuál fue la más útil? ¿por qué?
+La programación conjunta porque se aprende mas de el otro y se detectan errores mucho mas rapido
+
+
+
+
+8. ¿Qué referencias usaron? ¿Cuál fue la más útil? Incluyan citas con estándares adecuados.
+-https://www.w3schools.com/java/java_data_types.asp   
+-Video propuesto: "https://www.youtube.com/watch?v=gYkF0kZ1bkE"
